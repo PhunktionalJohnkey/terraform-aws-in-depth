@@ -10,6 +10,6 @@ variable "subnet_id" {
 
   validation {
     condition =  length(regexall("^subnet-[\\d|\\w]+$", var.subnet_id)) == 1
-    error_message = "The subnet-id must match the apttern ^subnet-[\\id|\\w]+
+    error_message = "The subnet-id must match the pattern ^subnet-[\\id|\\w]+$"
   }
 }
